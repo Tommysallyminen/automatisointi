@@ -1,0 +1,2 @@
+# automatisointi
+TAK-Kurssi
