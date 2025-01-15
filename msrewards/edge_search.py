@@ -28,7 +28,7 @@ clicked_positions = []
 def click_all_images(image_path):
     try:
         # Etsi kaikki kuvat näytöltä
-        locations = list(pag.locateAllOnScreen(image_path, confidence=0.8))
+        locations = list(pag.locateAllOnScreen(image_path, confidence=0.9))
         
         if locations:
             for location in locations:
@@ -51,11 +51,9 @@ def click_all_images(image_path):
             raise pag.ImageNotFoundException  # Nosta poikkeus, jotta voimme siirtyä hakemaan sanalista
     except pag.ImageNotFoundException:
         print(f"Kuvaa '{image_path}' ei löytynyt.")
-        search_words_from_list()  # Kutsu sanalistahakua
     except Exception as e:
         if "highest confidence = 0.706" in str(e):  # Tarkista erityinen virheviesti
             print(f"Kuvaa ei löytynyt korkealla varmuudella (confidence = 0.706). Siirrytään hakemaan sanalistan sanoja.")
-            search_words_from_list()  # Kutsu sanalistahakua
         else:
             print(f"Tapahtui virhe: {e}")
 
@@ -64,6 +62,7 @@ def search_words_from_list():
     # Sanalista
     with open("sanalista.txt", "r") as sanalista:
         words = sanalista.read().splitlines()
+    
 
     # Valitse 10 satunnaista sanaa
     random_words = random.sample(words, 10)
@@ -89,11 +88,11 @@ def search_words_from_list():
     exit()  # Lopeta ohjelma sanalista ajettua lävitse
 
 # Ensimmäisen haku.png kuvan klikkaus
-click_all_images(r'C:\Users\Tomi\haku33.png')
+click_all_images(r'C:\Users\Tero\Documents\GitHub\automatisointi\msrewards\haku.png')
 
 # Odottaa hetken, jotta sivu latautuu
 time.sleep(5)
-
+search_words_from_list()  # Kutsu sanalistahakua
 # Palaa takaisin edelliselle sivulle
 pag.hotkey('ctrl', 'f4')
 time.sleep(5)  # Odottaa, että sivu latautuu
