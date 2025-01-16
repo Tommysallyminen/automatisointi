@@ -46,13 +46,15 @@ Rajoitukset
 
     Skripti olettaa tietyn tiedostorakenteen ja polut, mikä voi rajoittaa sen käytettävyyttä.
 
-    Kuvaentunnistuksen varmuustaso voi vaatia säätämistä eri näyttötarkkuuksille.
+    Kuvantunnistuksen varmuustaso voi vaatia säätämistä eri näyttötarkkuuksille.
 
     Skripti ei käsittele kaikkia mahdollisia virheitä ja reunatapauksia.
 
 Kehitysajatukset
 
     Paranna virheenkäsittelyä, jotta skriptistä tulee kestävämpi ja luotettavampi.
+
+    Tee lisää randomisointia esimerkiksi hakujen välissä ettei Microsoft tunnista sinua robotiksi.
 
     Lisää toiminnallisuus, joka mukautuu dynaamisesti eri näyttötarkkuuksille.
 
