@@ -59,5 +59,3 @@ Kehitysajatukset
     Lisää toiminnallisuus, joka mukautuu dynaamisesti eri näyttötarkkuuksille.
 
     Toteuta käyttäjäystävällinen määritystiedosto, jonka avulla käyttäjä voi asettaa polut ja muut parametrit helposti.
-
-    Laajenna tuki muille selaimille Microsoft Edgen lisäksi, jotta skripti on joustavampi.
